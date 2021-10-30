@@ -1,0 +1,12 @@
+{
+    "files": {
+        "README.md": "d36ffc76e95ea06a6e6715fdeefa25919feafdeb22c0a8500c74435156f707a3",
+        "index.js": "f52ecc47b32a47d317dd2c1a94b714354fb41a5d6e19f1238610de2fc5153012",
+        "module.json": "cade3abe7e13af741dbdf2a854385c2cad0c98548be8e0c6b3c3f59277f6509e",
+        "settings_migrator.js": "e287a66d9b47d5391e755ca9234a96991bd8e4d4f45fcda6b184d9f8c6de1730"
+    },
+    "defs": {
+        "C_REQUEST_CONTRACT": 1,
+        "S_OTHER_USER_APPLY_PARTY": 2
+    }
+}

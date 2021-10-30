@@ -1,0 +1,16 @@
+{
+    "name": "auto-lfg-accept",
+    "options": {
+        "niceName": "Auto LFG Accept",
+        "settingsFile": "config.json",
+        "settingsMigrator": "settings_migrator.js",
+        "reloadable": true,
+        "settingsVersion": 1
+    },
+    "author": "HSDN",
+    "description": "Auto LFG Accept",
+    "servers": ["https://raw.githubusercontent.com/hsdn/auto-lfg-accept/master/"],
+    "supportUrl": "https://github.com/hsdn/auto-lfg-accept/issues",
+    "version": "110.3",
+    "disableAutoUpdate": false
+}
