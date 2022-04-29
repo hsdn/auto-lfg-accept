@@ -5,4 +5,4 @@ Auto accept of requests to join the LFG.
 Toolbox(/8) | Command description
 --- | ---
 **lfg** | Module on/off (default off).
-**lfg cs** | Accept cross-server requests.
+**lfg cs** | Accept cross-server requests (since patch 108).

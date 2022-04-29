@@ -13,15 +13,24 @@ module.exports = function AutoLfgAccept(mod) {
 		}
 	});
 
-	mod.hook("S_OTHER_USER_APPLY_PARTY", 2, event => {
-		if (!enabled || (!mod.settings.crossserver && event.serverId !== mod.game.me.serverId)) return;
+	mod.hook("S_OTHER_USER_APPLY_PARTY", mod.majorPatchVersion >= 108 ? 2 : 1, event => {
+		if (!enabled) return;
 		const buffer = Buffer.alloc(1);
 		buffer.writeInt8(0);
-		mod.send("C_REQUEST_CONTRACT", 1, {
-			"type": 4,
-			"unk4": event.serverId,
-			"name": event.name,
-			"data": buffer
-		});
+		if (mod.majorPatchVersion >= 108) {
+			if (!mod.settings.crossserver && event.serverId !== mod.game.me.serverId) return;
+			mod.send("C_REQUEST_CONTRACT", 1, {
+				"type": 4,
+				"unk4": event.serverId,
+				"name": event.name,
+				"data": buffer
+			});
+		} else {
+			mod.send("C_REQUEST_CONTRACT", 1, {
+				"type": 4,
+				"name": event.name,
+				"data": buffer
+			});
+		}
 	});
 };
